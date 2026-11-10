@@ -17,9 +17,17 @@
 
   <section class="stage" aria-label="Rotating planet">
     <canvas id="planet" aria-hidden="true"></canvas>
-    <div class="planet-name" id="pname">Mercury</div>
-    <div class="hint">Drag to spin</div>
+    <div class="body-label main" id="lblMain"></div>
+    <div class="body-label" id="lblBuddy"></div>
+    <div class="hint">Drag to spin · pinch or scroll to zoom</div>
   </section>
+  <div class="scale-row">
+      <div class="tools">
+        <button id="buddyBtn" aria-pressed="true" title="Show Earth to scale">⊕ Earth to scale</button>
+        <button id="resetBtn" title="Reset view">⟲</button>
+      </div>
+    <p class="scale-cap" id="scaleCap"></p>
+  </div>
 
   <section class="card" id="card">
     <details class="stats" id="statsBox">
@@ -39,6 +47,7 @@
     <p id="final"></p>
     <button class="next" id="restart">Play again</button>
   </section>
+  <footer class="credit">Planet textures: <a href="https://www.solarsystemscope.com/textures/">Solar System Scope</a>, CC BY 4.0 · Data: NASA</footer>
 </main>
 <script type="module" src="app.js"></script>
 </body>

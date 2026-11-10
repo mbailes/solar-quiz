@@ -1,11 +1,12 @@
 // Planet data and one question per planet.
 // Physical data: NASA Planetary Fact Sheet (nssdc.gsfc.nasa.gov/planetary/factsheet/).
 // Moon counts change as new moons are confirmed; values here are as of 2025.
+// Texture maps: Solar System Scope (solarsystemscope.com/textures), CC BY 4.0.
 // rotationHours < 0 means retrograde (spins "backwards").
 
 export const PLANETS = [
   {
-    name: "Mercury", colours: ["#8c8680", "#b5afa8"], kind: "rocky", craters: true,
+    name: "Mercury", texture: "textures/2k_mercury.jpg",
     diameterKm: 4879, massEarth: 0.055, distanceAU: 0.39, rotationHours: 1407.6,
     yearDays: 88, moons: 0, meanTempC: 167, gravity: 3.7, tiltDeg: 0.03,
     fact: "A day on Mercury (sunrise to sunrise) lasts 176 Earth days — two of its years.",
@@ -17,7 +18,7 @@ export const PLANETS = [
     }
   },
   {
-    name: "Venus", colours: ["#d9b46b", "#f1dca0"], kind: "cloudy",
+    name: "Venus", texture: "textures/2k_venus_atmosphere.jpg",
     diameterKm: 12104, massEarth: 0.815, distanceAU: 0.72, rotationHours: -5832.5,
     yearDays: 224.7, moons: 0, meanTempC: 464, gravity: 8.9, tiltDeg: 177.4,
     fact: "Venus spins backwards, and so slowly that its day is longer than its year.",
@@ -29,7 +30,7 @@ export const PLANETS = [
     }
   },
   {
-    name: "Earth", colours: ["#1f5fa8", "#3f8f3a"], kind: "earth",
+    name: "Earth", texture: "textures/2k_earth_daymap.jpg",
     diameterKm: 12756, massEarth: 1, distanceAU: 1.0, rotationHours: 23.93,
     yearDays: 365.25, moons: 1, meanTempC: 15, gravity: 9.8, tiltDeg: 23.4,
     fact: "Earth is the only planet known to have liquid water on its surface — and life.",
@@ -41,7 +42,7 @@ export const PLANETS = [
     }
   },
   {
-    name: "Mars", colours: ["#b5502b", "#d9824f"], kind: "rocky", polarCaps: true,
+    name: "Mars", texture: "textures/2k_mars.jpg",
     diameterKm: 6792, massEarth: 0.107, distanceAU: 1.52, rotationHours: 24.62,
     yearDays: 687, moons: 2, meanTempC: -65, gravity: 3.7, tiltDeg: 25.2,
     fact: "Olympus Mons on Mars is the tallest volcano in the Solar System — about 22 km high.",
@@ -53,7 +54,7 @@ export const PLANETS = [
     }
   },
   {
-    name: "Jupiter", colours: ["#c9a27e", "#efe0c8"], kind: "gas", spot: "#b5523a",
+    name: "Jupiter", texture: "textures/2k_jupiter.jpg",
     diameterKm: 142984, massEarth: 317.8, distanceAU: 5.20, rotationHours: 9.93,
     yearDays: 4331, moons: 97, meanTempC: -110, gravity: 24.8, tiltDeg: 3.1,
     fact: "Jupiter's Great Red Spot is a storm wider than Earth that has raged for centuries.",
@@ -65,7 +66,7 @@ export const PLANETS = [
     }
   },
   {
-    name: "Saturn", colours: ["#d8bf8a", "#f3e6c2"], kind: "gas", rings: true,
+    name: "Saturn", texture: "textures/2k_saturn.jpg", rings: true,
     diameterKm: 120536, massEarth: 95.2, distanceAU: 9.58, rotationHours: 10.7,
     yearDays: 10747, moons: 274, meanTempC: -140, gravity: 10.4, tiltDeg: 26.7,
     fact: "Saturn's rings are made of countless chunks of ice and rock, some as small as sand, some as big as a house.",
@@ -77,7 +78,7 @@ export const PLANETS = [
     }
   },
   {
-    name: "Uranus", colours: ["#8fd3dc", "#b8e6ea"], kind: "ice",
+    name: "Uranus", texture: "textures/2k_uranus.jpg",
     diameterKm: 51118, massEarth: 14.5, distanceAU: 19.2, rotationHours: -17.24,
     yearDays: 30589, moons: 29, meanTempC: -195, gravity: 8.9, tiltDeg: 97.8,
     fact: "Each pole of Uranus gets about 42 years of continuous sunlight, then 42 years of darkness.",
@@ -89,7 +90,7 @@ export const PLANETS = [
     }
   },
   {
-    name: "Neptune", colours: ["#2f56c9", "#5b7fe0"], kind: "ice", spot: "#1b2f7a",
+    name: "Neptune", texture: "textures/2k_neptune.jpg",
     diameterKm: 49528, massEarth: 17.1, distanceAU: 30.1, rotationHours: 16.1,
     yearDays: 59800, moons: 16, meanTempC: -200, gravity: 11.2, tiltDeg: 28.3,
     fact: "Neptune has the fastest winds in the Solar System — over 2,000 km/h.",
@@ -101,3 +102,5 @@ export const PLANETS = [
     }
   }
 ];
+
+export const MOON = { name: "Moon", texture: "textures/2k_moon.jpg", diameterKm: 3474, rotationHours: 655.7, tiltDeg: 6.7 };
